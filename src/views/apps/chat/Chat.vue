@@ -2,6 +2,22 @@
   <!-- Need to add height inherit because Vue 2 don't support multiple root ele -->
   <div style="height: inherit">
     <div
+      style="max-width: 640px; height: 400px; margin: 2rem auto"
+    >
+      <div
+        class="video-responsive"
+      >
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/Y9-iboZBbh0"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        />
+      </div>
+    </div>
+    <div
       class="body-content-overlay"
       :class="{'show': shallShowUserProfileSidebar || shallShowActiveChatContactSidebar || mqShallShowLeftSidebar}"
       @click="mqShallShowLeftSidebar=shallShowActiveChatContactSidebar=shallShowUserProfileSidebar=false"
