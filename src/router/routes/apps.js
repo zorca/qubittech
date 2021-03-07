@@ -91,8 +91,8 @@ export default [
   // *--------- CHAT  ---------------------------------------*
   // *===============================================---*
   {
-    path: '/apps/chat',
-    name: 'apps-chat',
+    path: '/apps/stream',
+    name: 'apps-stream',
     component: () => import('@/views/apps/chat/Chat.vue'),
     meta: {
       contentRenderer: 'sidebar-left',

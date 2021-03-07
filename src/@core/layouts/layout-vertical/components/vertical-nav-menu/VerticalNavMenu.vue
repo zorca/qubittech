@@ -25,34 +25,28 @@
               to="/"
             >
               <span class="brand-logo">
-                <b-img
-                  :src="appLogoImage"
-                  alt="logo"
-                />
+                <logo />
               </span>
-              <h2 class="brand-text">
-                {{ appName }}
-              </h2>
             </b-link>
           </li>
 
           <!-- Toggler Button -->
-          <li class="nav-item nav-toggle">
-            <b-link class="nav-link modern-nav-toggle">
-              <feather-icon
-                icon="XIcon"
-                size="20"
-                class="d-block d-xl-none"
-                @click="toggleVerticalMenuActive"
-              />
-              <feather-icon
-                :icon="collapseTogglerIconFeather"
-                size="20"
-                class="d-none d-xl-block collapse-toggle-icon"
-                @click="toggleCollapsed"
-              />
-            </b-link>
-          </li>
+<!--          <li class="nav-item nav-toggle">-->
+<!--            <b-link class="nav-link modern-nav-toggle">-->
+<!--              <feather-icon-->
+<!--                icon="XIcon"-->
+<!--                size="20"-->
+<!--                class="d-block d-xl-none"-->
+<!--                @click="toggleVerticalMenuActive"-->
+<!--              />-->
+<!--              <feather-icon-->
+<!--                :icon="collapseTogglerIconFeather"-->
+<!--                size="20"-->
+<!--                class="d-none d-xl-block collapse-toggle-icon"-->
+<!--                @click="toggleCollapsed"-->
+<!--              />-->
+<!--            </b-link>-->
+<!--          </li>-->
         </ul>
       </slot>
     </div>
@@ -83,19 +77,20 @@
 <script>
 import navMenuItems from '@/navigation/vertical'
 import VuePerfectScrollbar from 'vue-perfect-scrollbar'
-import { BLink, BImg } from 'bootstrap-vue'
+import { BLink } from 'bootstrap-vue'
 import { provide, computed, ref } from '@vue/composition-api'
 import useAppConfig from '@core/app-config/useAppConfig'
 import { $themeConfig } from '@themeConfig'
+import Logo from '@core/layouts/components/Logo.vue'
 import VerticalNavMenuItems from './components/vertical-nav-menu-items/VerticalNavMenuItems.vue'
 import useVerticalNavMenu from './useVerticalNavMenu'
 
 export default {
   components: {
+    Logo,
     VuePerfectScrollbar,
     VerticalNavMenuItems,
     BLink,
-    BImg,
   },
   props: {
     isVerticalMenuActive: {
