@@ -36,7 +36,12 @@
 
     <b-row class="match-height">
       <b-col lg="6">
-        <analytics-avg-sessions :data="data.avgSessions" />
+<!--        <analytics-avg-sessions :data="data.avgSessions" />-->
+        <div class="card" style="overflow:hidden; border-radius: 0.428rem;">
+          <div class="video-responsive">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UF9rdI_NluY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
       </b-col>
       <b-col lg="6">
         <analytics-support-tracker :data="data.supportTracker" />
@@ -70,7 +75,6 @@ import StatisticCardWithAreaChart from '@core/components/statistics-cards/Statis
 import { kFormatter } from '@core/utils/filter'
 import InvoiceList from '@/views/apps/invoice/invoice-list/InvoiceList.vue'
 import AnalyticsCongratulation from './AnalyticsCongratulation.vue'
-import AnalyticsAvgSessions from './AnalyticsAvgSessions.vue'
 import AnalyticsSupportTracker from './AnalyticsSupportTracker.vue'
 import AnalyticsTimeline from './AnalyticsTimeline.vue'
 import AnalyticsSalesRadarChart from './AnalyticsSalesRadarChart.vue'
@@ -81,7 +85,6 @@ export default {
     BRow,
     BCol,
     AnalyticsCongratulation,
-    AnalyticsAvgSessions,
     StatisticCardWithAreaChart,
     AnalyticsSupportTracker,
     AnalyticsTimeline,
